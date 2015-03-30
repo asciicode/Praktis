@@ -113,4 +113,19 @@ define(['index3/app'], function (app) {
             </div>'
         }
     });
+
+    app.controller('MyController',
+        function($scope, $interpolate) {
+            $scope.to = 'ari@fullstack.ioc';
+            $scope.emailBody = 'Hello {{ to }},\n\nMy name is Ari too!';
+            // Set up a watch
+            $scope.$watch('emailBody', function (body) {
+                if (body) {
+                    var tpl = $interpolate(body);
+                    console.log(tpl)
+                    $scope.previewText =
+                        tpl({to: $scope.to});
+                }
+            });
+        });
 });
