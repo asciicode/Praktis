@@ -1,0 +1,10 @@
+[
+  {
+    "name": "link 1",
+    "link": "#/phone"
+  },
+  {
+    "name": "link 2",
+    "link": "#/directiveValidation"
+  }
+]

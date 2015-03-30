@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body data-ng-controller="allenCtrl as allenCtrl">
+    <h1>{{ allenCtrl.title }}</h1>
+
+    <ul>
+        <li ng-repeat="link in links">
+            <span><a href="{{link.link}}">{{link.name}}</a></span>
+        </li>
+    </ul>
+
+    <!-- BEGIN PAGE -->
+    <div class="page-content">
+        <!-- BEGIN PAGE CONTAINER-->
+        <div ng-view></div>
+        <!-- END PAGE CONTAINER-->
+    </div>
+    <!-- END PAGE -->
+
+    <script src="assets/libs/angular.js"></script>
+    <script src="assets/libs/angular-route.js"></script>
+
+    <!-- Load custom scripts via RequireJS -->
+    <script src="assets/libs/require.js" data-main="app/index3/main.js"></script>
+</body>
+</html>
