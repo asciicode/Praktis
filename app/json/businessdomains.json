@@ -1,0 +1,17 @@
+[ {
+  "id" : "0ab91196a11711e489d3123b93f75cba",
+  "updateToken" : "bbe77dca33eced35e3d3f3925b25b96f434f5e2f5311de57322463f50104a650",
+  "createdBy" : "system",
+  "createdDate" : "2015-03-20T16:43:12.000+08:00",
+  "lastUpdatedBy" : "system",
+  "lastUpdatedDate" : "2015-03-20T16:43:12.000+08:00",
+  "active" : true,
+  "businessDomainCode" : "HK-BUYSIDE-1",
+  "shortDescription" : "HK Buy-side 1",
+  "description" : "HK Buy-side 1",
+  "sortPriority" : 99999,
+  "bookingCenterOption" : true,
+  "bookingCenterCode" : "HK-BUYSIDE-1",
+  "partyNumber" : "00000000000001",
+  "primaryBusinessDomain" : true
+} ]
