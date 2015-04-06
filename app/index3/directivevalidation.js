@@ -6,7 +6,7 @@ define(['index3/app'], function (app) {
         return {
             require: 'ngModel',
             link: function (scope, elm, attrs, ctrl) {
-                ctrl.$validators.integer = function (modelValue, viewValue) {
+                ctrl.$validators.integerAllen = function (modelValue, viewValue) {
                     /*if (ctrl.$isEmpty(modelValue)) {
                      // consider empty models to be valid
                      return true;

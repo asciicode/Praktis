@@ -24,7 +24,9 @@ define(['index3/app'], function (app) {
                     });
             }
         }]);
-
+    //app.config(['RestangularProvider', function(RestangularProvider) {
+    //    RestangularProvider.setBaseUrl('api/kernel/v1/');
+    //}]);
     app.config(['$routeProvider',
         function ($routeProvider) {
             $routeProvider.when('/phone', {
@@ -38,6 +40,18 @@ define(['index3/app'], function (app) {
                 controller: 'anotherCtrl',
                 resolve: {
 
+                }
+            }).when("/news", {
+                templateUrl: "app/partial/link3.html",
+                controller: "link3Ctrl",
+                resolve: {
+                    message: function (messageService, dataService, dropDownService) {
+                        console.log('resolve message invoke allen ', dropDownService);
+                        return messageService.getMessage();
+                    },
+                    businessDomains: function(dropDownService) {
+                        return dropDownService.getBusinessDomainList();
+                    }
                 }
             });
         }

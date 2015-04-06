@@ -6,5 +6,9 @@
   {
     "name": "link 2",
     "link": "#/directiveValidation"
+  },
+  {
+    "name": "link 3",
+    "link": "#/news"
   }
 ]

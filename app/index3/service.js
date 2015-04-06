@@ -17,4 +17,12 @@ define(['index3/app'], function (app) {
     customersFactory.$inject = injectParams;
 
     app.factory('customersService', customersFactory);
+
+    app.factory('messageService', function($q){
+        return {
+            getMessage: function(){
+                return $q.when("Hello World!");
+            }
+        };
+    });
 });
