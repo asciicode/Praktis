@@ -2,15 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5fb90283-f68e-495e-9ea7-5f70ae513211" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index3/app.js" afterPath="$PROJECT_DIR$/app/index3/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index3/controller.js" afterPath="$PROJECT_DIR$/app/index3/controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index3/directivevalidation.js" afterPath="$PROJECT_DIR$/app/index3/directivevalidation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index3.html" afterPath="$PROJECT_DIR$/index3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/json/link.json" afterPath="$PROJECT_DIR$/app/json/link.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partial/link2.html" afterPath="$PROJECT_DIR$/app/partial/link2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index3/main.js" afterPath="$PROJECT_DIR$/app/index3/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index3/service.js" afterPath="$PROJECT_DIR$/app/index3/service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Praktis.iws" />
@@ -130,6 +121,9 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -321,6 +315,13 @@
       <option name="number" value="Default" />
       <updated>1427206031933</updated>
     </task>
+    <task id="LOCAL-00001" summary="adding restangular">
+      <created>1428328275827</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1428328275827</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -347,6 +348,7 @@
     <frame x="-8" y="-8" width="1936" height="1034" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -382,6 +384,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="adding restangular" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding restangular" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
