@@ -11,7 +11,7 @@ define(['index3/app'], function (app) {
     app.controller('allenCtrl', ['$scope', 'dataService', 'customersService'
         , function ($scope, dataService, customersService) {
             // dataService.getCustomers();
-            this.title = 'this title';
+            this.title = 'This.Title';
 
             getCustomers();
             function getCustomers() {
@@ -44,10 +44,28 @@ define(['index3/app'], function (app) {
             }).when("/news", {
                 templateUrl: "app/partial/link3.html",
                 controller: "link3Ctrl",
+                reloadOnSearch: false,
                 resolve: {
                     message: function (messageService, dataService, dropDownService) {
                         console.log('resolve message invoke allen ', dropDownService);
                         return messageService.getMessage();
+                    },
+                    urlSearchCriteria: function($q, $location) {
+                        var paramObject = _.cloneDeep($location.search());
+                        var tableParams = _.pick($location.search(), 'page', 'count');
+                        var searchParams = _.omit($location.search(), function(value, key) {
+                            return (key=='page' || key=='count' || key=='reload' || key=='sort' || key=='dir');
+                        });
+                        // Massage the Sort Params, e.g. sortParams['username'] = 'desc'
+                        var sortParamsFlat = _.pick($location.search(), 'sort', 'dir');
+                        if (sortParamsFlat.sort) {
+                            tableParams.sorting = {};
+                            tableParams.sorting[sortParamsFlat.sort] = sortParamsFlat.dir;
+                        }
+                        return {
+                            searchParams: searchParams,
+                            tableParams: tableParams
+                        };
                     },
                     businessDomains: function(dropDownService) {
                         return dropDownService.getBusinessDomainList();

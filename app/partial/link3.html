@@ -1,4 +1,25 @@
 <div>
     <h1>{{ message }}</h1>
-
+    <div class="row-fluid">
+        <div class="span12">
+            <table class="table table-bordered table-hover" ng-table="tableParams">
+                <tbody class="table-bordered">
+                <tr ng-repeat="user in $data" ng-class="{'odd':$odd, 'even': $even ,'ngTableRow-disabled':!user.active}">
+                    <td style="width:8px;"><input type="checkbox" ng-disabled="{{!user.active}}" ng-model="user.checked" ng-checked="user.checked"/></td>
+                    <td>Active</td>
+                    <td>{{user.username}}</td>
+                    <td>{{user.userProfile.displayName}}</td>
+                    <td>{{user.userProfile.businessDomainCodeDesc}}</td>
+                    <td>{{user.userProfile.profileName}}</td>
+                    <td>{{user.userProfile.email}}</td>
+                    <td>
+                        <a title="View" class="btn green icn-only" ng-href="#/maintainUserDetail?username={{user.username}}&mode=view"><i class="icon-book"></i></a>
+                        <a title="Edit" class="btn blue icn-only" ng-href="#/maintainUserDetail?username={{user.username}}&mode=edit"><i class="icon-edit"></i></a>
+                        <button title="Delete" class="btn red icn-only" ng-disabled="{{!user.active}}" confirm-click="singleDelete(user)"> <i class="icon-trash"></i></button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
