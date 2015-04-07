@@ -24,9 +24,11 @@ define(['index3/app'], function (app) {
                     });
             }
         }]);
-    //app.config(['RestangularProvider', function(RestangularProvider) {
-    //    RestangularProvider.setBaseUrl('api/kernel/v1/');
-    //}]);
+    app.config(['$translateProvider', function($translateProvider) {
+        console.log('$translateProvider ', $translateProvider);
+        $translateProvider.useLoader('$ALLENLocaleFileLoader', {});
+        $translateProvider.preferredLanguage('en');
+    }]);
     app.config(['$routeProvider',
         function ($routeProvider) {
             $routeProvider.when('/phone', {

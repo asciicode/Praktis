@@ -12,6 +12,7 @@ require(
         'index3/dataservice',
         'index3/directivevalidation',
         'index3/dropdownservice',
+        'index3/LocaleFileLoader',
         'index3/localrestangular',
         'index3/controller'
     ],

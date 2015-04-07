@@ -6,7 +6,7 @@
                 <tbody class="table-bordered">
                 <tr ng-repeat="user in $data" ng-class="{'odd':$odd, 'even': $even ,'ngTableRow-disabled':!user.active}">
                     <td style="width:8px;"><input type="checkbox" ng-disabled="{{!user.active}}" ng-model="user.checked" ng-checked="user.checked"/></td>
-                    <td>Active</td>
+                    <td>{{'kernel.common.active'|translate}}</td>
                     <td>{{user.username}}</td>
                     <td>{{user.userProfile.displayName}}</td>
                     <td>{{user.userProfile.businessDomainCodeDesc}}</td>
