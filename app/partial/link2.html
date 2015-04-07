@@ -34,6 +34,13 @@
             <li>Second link</li>
         </ul>
     </div>
-
+    <br>
+    <div ng-controller="MyController">
+        <input ng-model="to"
+               type="email"
+               placeholder="Recipient" />
+        <textarea ng-model="emailBody"></textarea>
+        <pre>{{ previewText }}</pre>
+    </div>
 
 </form>

@@ -1,6 +1,7 @@
 'use strict';
 
-define(['index3/app'], function (app) {
+define(['index3/app'],
+    function (app) {
     app.factory('dropDownService', ['$q','localrestangular',function($q,localrestangular){
         var returnObj = {
             getBusinessDomainList: function() {
