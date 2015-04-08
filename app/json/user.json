@@ -1,0 +1,42 @@
+{
+  "id" : "92fb04af317b4ab98858d19c5a901f75",
+  "updateToken" : "571779c6f7a534af334bb78e526c93b05e3a233a5c759a7f7876a21f0940647f",
+  "createdBy" : "system",
+  "createdDate" : "2015-03-20T16:42:29.000+08:00",
+  "lastUpdatedBy" : "system",
+  "lastUpdatedDate" : "2015-03-20T16:42:29.000+08:00",
+  "active" : true,
+  "username" : "dealer1",
+  "lastPasswordChangeDate" : "2015-01-30T17:56:41.000+08:00",
+  "locked" : false,
+  "userNumber" : "0005",
+  "partyNumber" : null,
+  "userProfile" : {
+    "id" : "e423dea2a6cd11e4bcd80800200c9a66",
+    "updateToken" : "79a1c0cf0e3cda4adbe9a2d84093eb01b39a4fe5333b85caba39e66c6f51c3bf",
+    "createdBy" : "system",
+    "createdDate" : "2015-03-20T16:42:29.000+08:00",
+    "lastUpdatedBy" : "system",
+    "lastUpdatedDate" : "2015-03-20T16:42:29.000+08:00",
+    "active" : true,
+    "profileName" : "dealer1",
+    "username" : "dealer1",
+    "fullName" : "Dealer1",
+    "displayName" : "dealer1",
+    "businessDomainCode" : "HK-BUYSIDE-1",
+    "email" : null
+  },
+  "userRoles" : [ {
+    "id" : "0aaead682d7247e5a36eb4994f6cbd28",
+    "updateToken" : "9e28ff4cddfb5a32c3fc35b8320cf43e8915cf987c27b09056d814e15b2c1ba4",
+    "createdBy" : "system",
+    "createdDate" : "2015-03-20T16:42:29.000+08:00",
+    "lastUpdatedBy" : "system",
+    "lastUpdatedDate" : "2015-03-20T16:42:29.000+08:00",
+    "active" : true,
+    "effectiveFromDate" : "2015-01-30T17:56:41.000+08:00",
+    "effectiveToDate" : "2020-12-31T23:59:59.000+08:00",
+    "username" : "dealer1",
+    "roleName" : "DEALER"
+  } ]
+}

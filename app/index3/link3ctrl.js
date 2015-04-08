@@ -80,7 +80,7 @@ define(['index3/app'], function (app) {
                 getData: tableParamGetData
                 //getData: {}
             });
-            //$scope.tableParams.parameters(urlSearchCriteria.tableParams, true);
+            $scope.tableParams.parameters(urlSearchCriteria.tableParams, true);
         }
         init();
     });

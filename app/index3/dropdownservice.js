@@ -5,8 +5,7 @@ define(['index3/app'],
     app.factory('dropDownService', ['$q','localrestangular',function($q,localrestangular){
         var returnObj = {
             getBusinessDomainList: function() {
-                //console.log('gbd ', $q);
-                console.log('gbd ', localrestangular);
+                //console.log('gbd ', localrestangular);
                 var deferred=$q.defer();
                 localrestangular.one('businessdomains.json').get().then(function(response) {
                     var businessDomainList = [];
@@ -14,7 +13,7 @@ define(['index3/app'],
                         var bizDomain = {id:response[i].businessDomainCode, label:response[i].description};
                         businessDomainList.push(bizDomain);
                     }
-                    console.log(businessDomainList);
+                    //console.log(businessDomainList);
                     deferred.resolve(businessDomainList);
                 });
                 return deferred.promise;

@@ -1,0 +1,151 @@
+<div error-block="errorMsgList" style="margin-top:20px;"></div>
+
+<form name="inputForm" novalidate class="form-horizontal">
+    <!-- Input fields Row -->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- Content -->
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="control-group noMargin" ng-class="{error: (inputForm['user.username'].$dirty && inputForm['user.username'].$invalid) || error.errorFields['user.username']}">
+                        <label class="control-label fontSize11" style="width:120px"><b>{{'kernel.common.MaintainUser.username' | translate}}:</b></label>
+                        <div class="controls" style="margin-left:150px;" ng-show="mode=='edit'">
+                            <input type="text" class="input-sm span12" name="user.username" ng-readonly="user.id" ng-model="user.username" required/>
+                        </div>
+                        <div class="controls marginTop8" style="margin-left:150px;" ng-show="mode=='view'">
+                            <span class="text fontSize11 noMargin">{{user.username}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="span6">
+                    <div class="control-group noMargin" ng-class="{error: (inputForm['user.userProfile.profileName'].$dirty && inputForm['user.userProfile.profileName'].$invalid) || error.errorFields['user.userProfile.profileName']}">
+                        <label class="control-label fontSize11" style="width:120px"><b>{{'kernel.common.MaintainUser.profileName' | translate}}:</b></label>
+                        <div class="controls" style="margin-left:150px;" ng-show="mode=='edit'">
+                            <input type="text" class="input-sm span12" name="user.userProfile.profileName" ng-model="user.userProfile.profileName" required/>
+                        </div>
+                        <div class="controls marginTop8" style="margin-left:150px;" ng-show="mode=='view'">
+                            <span class="text fontSize11 noMargin">{{user.userProfile.profileName}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+             <div class="row-fluid" ng-show="showPasswordFields">
+                <div class="span6">
+                    <div class="control-group noMargin" ng-class="{error: (inputForm['user.newPassword'].$dirty && inputForm['user.newPassword'].$invalid) || error.errorFields['user.newPassword'] || passwordMisMatch || passwordEmpty}">
+                        <label class="control-label fontSize11" style="width:120px"><b>{{'kernel.common.MaintainUser.password' | translate}}:</b></label>
+                        <div class="controls" style="margin-left:150px;">
+                            <input class="input-sm span12" name="user.newPassword" type="password" autocomplete="off"  ng-model="user.newPassword"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="span6">
+                    <div class="control-group noMargin" ng-class="{error: (inputForm['user.confirmPassword'].$dirty && inputForm['user.confirmPassword'].$invalid) || error.errorFields['user.confirmPassword'] || passwordMisMatch || passwordEmpty}">
+                        <label class="control-label fontSize11" style="width:120px"><b>{{'kernel.common.MaintainUser.confirmPassword' | translate}}:</b></label>
+                        <div class="controls" style="margin-left:150px;">
+                            <input class="input-sm span12" name="user.confirmPassword" type="password" autocomplete="off" ng-model="user.confirmPassword"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="control-group noMargin" ng-class="{error: (inputForm['user.userProfile.fullName'].$dirty && inputForm['user.userProfile.fullName'].$invalid) || error.errorFields['user.userProfile.fullName']}">
+                        <label class="control-label fontSize11" style="width:120px"><b>{{'kernel.common.MaintainUser.fullName' | translate}}:</b></label>
+                        <div class="controls" style="margin-left:150px;" ng-show="mode=='edit'">
+                            <input type="text" class="input-sm span12" name="user.userProfile.fullName" ng-model="user.userProfile.fullName" required/>
+                        </div>
+                        <div class="controls marginTop8" style="margin-left:150px;" ng-show="mode=='view'">
+                            <span class="text fontSize11 noMargin">{{user.userProfile.fullName}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="span6">
+                    <div class="control-group noMargin" ng-class="{error: (inputForm['user.userProfile.displayName'].$dirty && inputForm['user.userProfile.displayName'].$invalid) || error.errorFields['user.userProfile.displayName']}">
+                        <label class="control-label fontSize11" style="width:120px"><b>{{'kernel.common.MaintainUser.displayName' | translate}}:</b></label>
+                        <div class="controls" style="margin-left:150px;" ng-show="mode=='edit'">
+                            <input type="text" class="input-sm span12" name="user.userProfile.displayName" ng-model="user.userProfile.displayName" required/>
+                        </div>
+                        <div class="controls marginTop8" style="margin-left:150px;" ng-show="mode=='view'">
+                            <span class="text fontSize11 noMargin">{{user.userProfile.displayName}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="control-group noMargin" ng-class="{error: (inputForm['user.userProfile.businessDomainCode'].$dirty && inputForm['user.userProfile.businessDomainCode'].$invalid) || error.errorFields['user.userProfile.businessDomainCode']}">
+                        <label class="control-label fontSize11" style="width:120px"><b>{{'kernel.common.MaintainUser.businessDomainCode' | translate}}:</b></label>
+                        <div class="controls" style="margin-left:150px;" ng-show="mode=='edit'">
+                            <select ng-model="user.userProfile.businessDomainCode" class="span12 fontSize11 select-sm" name="user.userProfile.businessDomainCode" required  
+                            ng-options="businessDomain.id as businessDomain.label for businessDomain in businessDomains | orderBy: ['sortPriority','label']"></select>
+                        </div>
+                        <div class="controls marginTop8" style="margin-left:150px;" ng-show="mode=='view'">
+                            <span class="text fontSize11 noMargin">{{user.userProfile.businessDomainCodeDesc}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="span6">
+                    <div class="control-group noMargin" ng-class="{error: (inputForm['user.userProfile.email'].$dirty && inputForm['user.userProfile.email'].$invalid) || error.errorFields['user.userProfile.email']}">
+                        <label class="control-label fontSize11" style="width:120px"><b>{{'kernel.common.MaintainUser.email' | translate}}:</b></label>
+                        <div class="controls" style="margin-left:150px;" ng-show="mode=='edit'">
+                            <input type="text" class="input-sm span12" name="user.userProfile.email" ng-model="user.userProfile.email"/>
+                        </div>
+                        <div class="controls marginTop8" style="margin-left:150px;" ng-show="mode=='view'">
+                            <span class="text fontSize11 noMargin">{{user.userProfile.email}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="control-group noMargin" ng-class="{error: (inputForm['userRoles'].$dirty && inputForm['userRoles'].$invalid) || error.errorFields['userRoles']}">
+                        <label class="control-label fontSize11" style="width:120px"><b>{{'kernel.common.MaintainUser.userRoles' | translate}}:</b></label>
+                        <div class="controls" style="margin-left:150px;" ng-show="mode=='edit'">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <label class="checkbox line" ng-repeat="userRole in userRoles">
+                                        <input type="checkbox" ng-model="userRole.checked" ng-checked="userRole.checked" style="margin-left:0px; margin-top:5px"/>&nbsp;&nbsp; {{userRole.description}}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="controls marginTop8" style="margin-left:150px;" ng-show="mode=='view'">
+                            <div class="row-fluid">
+                                <div class="span3">&nbsp;
+                                    <label class="checkbox line" ng-repeat="userRole in userRoles" ng-show="userRole.checked">
+                                        {{userRole.description}}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Button Row -->
+    <div class="row-fluid">
+        <div class="span6">
+            <a title="Back" class="btn" href="#/maintainUserList">{{'kernel.common.Buttons.back' | translate}}</a>
+        </div>
+        <!-- Edit Mode -->
+        <!--<div class="span6" ng-show="mode=='edit'">
+            <span class="pull-right">
+            <button class="btn yellow" ng-click="showResetPassword(inputForm);$event.preventDefault();" >{{'kernel.common.Buttons.resetPassword' | translate}}</button>
+            <button class="btn has-spinner" confirm-click="saveRec(inputForm);$event.preventDefault();" confirm-msg='Confirm Save?' spin-button="placeOrderBtn.loading" ng-init="placeOrderBtn.loading='normal'">{{'kernel.common.Buttons.save' | translate}}</button>
+            </span>
+        </div>-->
+        <!-- View Mode -->
+        <!--<div class="span6" ng-show="mode=='view'">
+            <span class="pull-right">
+            <button class="btn" style="margin-right: 5px;" confirm-click="deleteRec();$event.preventDefault();" confirm-msg='Confirm Delete?'>{{'kernel.common.Buttons.delete'  | translate}}</button>
+            <button class="btn" style="margin-right: 5px;" ng-click="switchToEdit()">{{'kernel.common.Buttons.edit'  | translate}}</button>
+            </span>
+        </div>-->
+    </div>
+</form>

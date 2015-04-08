@@ -14,6 +14,7 @@ require(
         'index3/dropdownservice',
         'index3/LocaleFileLoader',
         'index3/localrestangular',
+        'index3/maintainuserdetail',
         'index3/controller'
     ],
     function () {

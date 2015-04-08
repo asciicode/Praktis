@@ -29,6 +29,10 @@ define(['index3/app'], function (app) {
         $translateProvider.useLoader('$ALLENLocaleFileLoader', {});
         $translateProvider.preferredLanguage('en');
     }]);
+    app.config(['$allenProvider', function($allenProvider) {
+        console.log('$allenProvider ', $allenProvider);
+
+    }]);
     app.config(['$routeProvider',
         function ($routeProvider) {
             $routeProvider.when('/phone', {
@@ -43,7 +47,7 @@ define(['index3/app'], function (app) {
                 resolve: {
 
                 }
-            }).when("/news", {
+            }).when("/maintainUserList", {
                 templateUrl: "app/partial/link3.html",
                 controller: "link3Ctrl",
                 reloadOnSearch: false,

@@ -1,0 +1,41 @@
+[ {
+  "id" : "889a9770a69811e4bcd80800200c9a66",
+  "updateToken" : "d8b8437c7a0636fb636c8c7c290464ccb1e45134a8408da1c08fd3961cb5e3e2",
+  "createdBy" : "system",
+  "createdDate" : "2015-01-30T10:50:21.000+08:00",
+  "lastUpdatedBy" : "system",
+  "lastUpdatedDate" : "2015-01-30T10:50:21.000+08:00",
+  "active" : true,
+  "name" : "APP_ADMIN",
+  "description" : "Application Admin"
+}, {
+  "id" : "889a9771a69811e4bcd80800200c9a66",
+  "updateToken" : "103b76d4c7b08af9532d5889f8f38f2f86c4c51dbdbecb9a2e0bc7fad29f4cdb",
+  "createdBy" : "system",
+  "createdDate" : "2015-01-30T10:50:21.000+08:00",
+  "lastUpdatedBy" : "system",
+  "lastUpdatedDate" : "2015-01-30T10:50:21.000+08:00",
+  "active" : true,
+  "name" : "BUYSIDE_ADMIN",
+  "description" : "Buy-side Admin"
+}, {
+  "id" : "889a9772a69811e4bcd80800200c9a66",
+  "updateToken" : "5be0898212f1f45b3f77ccab6b5b971f206180e6728dff12f1406b7eb85a6cce",
+  "createdBy" : "system",
+  "createdDate" : "2015-01-30T10:50:21.000+08:00",
+  "lastUpdatedBy" : "system",
+  "lastUpdatedDate" : "2015-01-30T10:50:21.000+08:00",
+  "active" : true,
+  "name" : "DEALER",
+  "description" : "Buy-side Dealer"
+}, {
+  "id" : "889a9773a69811e4bcd80800200c9a66",
+  "updateToken" : "6203fab84a92a1ccad89de2f52a3ce9142cc7b9ab0f530aef566b7a6623b92f3",
+  "createdBy" : "system",
+  "createdDate" : "2015-01-30T10:50:21.000+08:00",
+  "lastUpdatedBy" : "system",
+  "lastUpdatedDate" : "2015-01-30T10:50:21.000+08:00",
+  "active" : true,
+  "name" : "SELLSIDE_ADMIN",
+  "description" : "Sell-side Admin"
+} ]
