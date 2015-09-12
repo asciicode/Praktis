@@ -2,7 +2,7 @@
 
 define(['index3/app'], function (app) {
     console.log('define link3ctrl');
-    app.controller('link3Ctrl', function ($scope, $location, message, urlSearchCriteria, businessDomains, ngTableParams, localrestangular) {
+    app.controller('link3Ctrl', function ($rootScope, $scope, $location, message, urlSearchCriteria, businessDomains, ngTableParams, localrestangular) {
         $scope.searchCriteria = {};
         $scope.availBusinessDomains = businessDomains;
         //console.log('init fxn link3ctrl ',urlSearchCriteria);
@@ -83,5 +83,7 @@ define(['index3/app'], function (app) {
             $scope.tableParams.parameters(urlSearchCriteria.tableParams, true);
         }
         init();
+
+        $rootScope.$broadcast('downloadFile', 'http://www.allen.com', 'expect arg2');
     });
 });

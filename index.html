@@ -7,7 +7,27 @@
 </head>
 <body data-ng-controller="allenCtrl">
 <h1>{{ title }}</h1>
-
+<input type="text" ng-model="textMe"/>{{ textMe }}
+<button title="Button Me" class="btn red icn-only" ng-click="">Click Me</button>
+<br>
+<table border="0">
+    <tr>
+        <td><input type="checkbox" ng-model="enableDisableButton">Disable Button</td>
+        <td><button ng-disabled="enableDisableButton">Click Me!</button></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" ng-model="showHide1">Show Button</td>
+        <td><button ng-show="showHide1">Click Me!</button></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" ng-model="showHide2">Hide Button</td>
+        <td><button ng-hide="showHide2">Click Me!</button></td>
+    </tr>
+    <tr>
+        <td><p>Total click: {{ clickCounter }}</p></td>
+        <td><button ng-click="clickCounter = clickCounter + 1">Click Me!</button></td>
+    </tr>
+</table>
 <script src="assets/libs/require.js" data-main="app/config.js"></script>
 <script>
 

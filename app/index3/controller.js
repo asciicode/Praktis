@@ -8,8 +8,8 @@ define(['index3/app'], function (app) {
     //};
     var injectParams = ['dataService', 'customersService'];
 
-    app.controller('allenCtrl', ['$scope', 'dataService', 'customersService'
-        , function ($scope, dataService, customersService) {
+    app.controller('allenCtrl', ['$scope', '$rootScope', 'dataService', 'customersService'
+        , function ($scope, $rootScope, dataService, customersService) {
             // dataService.getCustomers();
             this.title = 'This.Title';
 
@@ -23,12 +23,17 @@ define(['index3/app'], function (app) {
                         $scope.title = 'Unable to load customer data: ' + error.message;
                     });
             }
+
+            $rootScope.$on("downloadFile", function (e, arg1, arg2) {
+                console.log('fired downloadFile event ', arg1, arg2);
+            });
         }]);
     app.config(['$translateProvider', function($translateProvider) {
         console.log('$translateProvider ', $translateProvider);
         $translateProvider.useLoader('$ALLENLocaleFileLoader', {});
         $translateProvider.preferredLanguage('en');
     }]);
+
     app.config(['$allenProvider', function($allenProvider) {
         console.log('$allenProvider ', $allenProvider);
 

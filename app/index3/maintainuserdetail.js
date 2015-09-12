@@ -20,8 +20,10 @@ define(['index3/app'], function (app) {
             })
         }
     ]);
-    app.controller('maintainUserDetailCtrl', ['$scope', '$location', 'localrestangular', 'userRoles', 'businessDomains',
-            function($scope, $location, localrestangular, userRoles, businessDomains){
+    app.controller('maintainUserDetailCtrl', ['$scope', '$location', '$filter', '$translate','localrestangular', 'userRoles', 'businessDomains',
+            function($scope, $location, $filter, $translate, localrestangular, userRoles, businessDomains){
+        console.log('$filter translate ', $translate('oms.core.common.orderTapon'));
+        console.log('$filter translate ', $filter('translate')('oms.core.common.orderTapon'));
 
         $scope.mode = $location.search().mode? $location.search().mode : 'edit';
         $scope.username = $location.search().username;
