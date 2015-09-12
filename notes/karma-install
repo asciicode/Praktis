@@ -1,0 +1,19 @@
+-- WOT API
+application_id=3153b41fc93673a05a75cc83161d3bac
+"account_id": 2002495767
+
+npm
+npm install -g node-gyp (check website for other program like python, window express, windows sdk)
+npm install karma --save-dev
+npm install karma-jasmine --save-dev
+npm install karma-chrome-launcher --save-dev
+npm install -g karma-cli
+karma init
+karma start karma.conf.js
+
+*C:\Program Files\nodejs\node_modules\npm\npmmrc
+npm install bower -g
+*add git.exe in the path
+bower install angular
+bower install angular-mocks
+bower install angular-resource
